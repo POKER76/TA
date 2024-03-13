@@ -1,0 +1,6 @@
+# WiFi Details
+WIFI_SSID = "Kelas"
+WIFI_PASSWORD = "Mahasisw4!!"
+
+# Telegram
+botToken = "6768371377:AAFuqIRwiJYtAvB7r0UBy6j29io-OXI2x1M"
