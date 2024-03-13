@@ -1,0 +1,12 @@
+REM Author: JHOJY
+REM Title: TURN OFF!! 
+REM Target: windows 10 
+
+GUI r
+DELAY 300
+STRING notepad
+DELAY 1000
+ENTER
+DELAY 500
+CTRL t
+STRING START HACKING .........

